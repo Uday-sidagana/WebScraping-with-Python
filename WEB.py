@@ -4,7 +4,7 @@ import requests
 
 from bs4 import BeautifulSoup
 
-url ="https://thehoppygoatfarm.com/2018/03/egg-yolk-coffee-yup-thing-awesome/"
+url ="https://en.wikipedia.org/wiki/Grenade"
 
 def FetchAndSave(url, path):
     r = requests.get(url)
@@ -12,4 +12,4 @@ def FetchAndSave(url, path):
     with open(path, "w") as f:
         f.write(r.text)
 
-FetchAndSave(url, "WebScraping/Data/text.html")
+FetchAndSave(url, "Data/text.html")
