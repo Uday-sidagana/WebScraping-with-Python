@@ -21,7 +21,7 @@ print(s.get("href"))'''
 '''soup.select(div.x) -- <div class="x">
 soup.select(div#x) -- <div id="x">'''
 
-ulTag = soup.new_tag("ul")
+'''ulTag = soup.new_tag("ul")
 ltTag = soup.new_tag("lt")
 ltTag.name = "SIDAGNANA"
 
@@ -31,3 +31,4 @@ soup.html.body.insert(0, ulTag)
 
 with open("modify.html", "w") as f:
     f.write(str(soup))
+'''
