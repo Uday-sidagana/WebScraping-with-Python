@@ -49,9 +49,9 @@ print(results)'''
 results2 = soup.find_all(no_class_no_id)
 print(results2)'''
 
-
+'''
 def has_lang(tag):
     return tag.has_attr("lang")
 
 results3 = soup.find_all(has_lang)
-print(results3)
+print(results3)'''
