@@ -6,3 +6,5 @@ url= "https://en.wikipedia.org/wiki/Grenade#Anti-tank"
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'html.parser')
 
+title= soup.select("span.mw-page-title-main")
+print(title[0].string)
