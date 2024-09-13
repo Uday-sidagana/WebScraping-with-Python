@@ -1,0 +1,8 @@
+from bs4 import BeautifulSoup
+import requests
+
+url= "https://en.wikipedia.org/wiki/Grenade#Anti-tank"
+
+r = requests.get(url)
+soup = BeautifulSoup(r.text, 'html.parser')
+
