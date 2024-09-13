@@ -33,11 +33,25 @@ with open("modify.html", "w") as f:
     f.write(str(soup))
 '''
 
-cont= soup.find(class_="container")
+'''cont= soup.find(class_="container")
 print(cont.has_attr("class"))
 
 def has_class_not_id(tag):
  return tag.has_attr("class") and not tag.has_attr("id")
 
 results= soup.find_all(has_class_not_id)
-print(results)
+print(results)'''
+
+
+'''def no_class_no_id(tag):
+   return not tag.has_attr("class") and not tag.has_attr("id")
+
+results2 = soup.find_all(no_class_no_id)
+print(results2)'''
+
+
+def has_lang(tag):
+    return tag.has_attr("lang")
+
+results3 = soup.find_all(has_lang)
+print(results3)
