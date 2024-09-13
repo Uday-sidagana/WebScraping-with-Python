@@ -38,3 +38,6 @@ print(cont.has_attr("class"))
 
 def has_class_not_id(tag):
  return tag.has_attr("class") and not tag.has_attr("id")
+
+results= soup.find_all(has_class_not_id)
+print(results)
