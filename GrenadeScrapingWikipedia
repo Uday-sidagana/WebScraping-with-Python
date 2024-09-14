@@ -7,4 +7,19 @@ r = requests.get(url)
 soup = BeautifulSoup(r.text, 'html.parser')
 
 title= soup.select("span.mw-page-title-main")
-print(title[0].string)
+title1 =title[0].string
+
+description = soup.select("div.mw-content-ltr.mw-parser-output")
+desc=""
+if description:
+    paragraphs = description[0].find_all('p')  # Accessing the first div element
+
+    # Loop through each <p> tag and print the text
+    for p in paragraphs:
+        desc += p.get_text() + "\n" 
+        
+        
+
+
+with open("Wikipedia_text.html", "w") as f:
+    f.write(f"{title1}\n\n{desc}")
